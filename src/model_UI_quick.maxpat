@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 4,
+			"minor" : 1,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 2036.0, -142.0, 742.0, 600.0 ],
+		"rect" : [ 2038.0, 87.0, 738.0, 596.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -101,10 +101,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 299.0, 247.333008000000063, 150.0, 60.0 ],
+					"patching_rect" : [ 299.0, 247.333008000000063, 150.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 83.0, 80.6875, 217.0, 47.0 ],
+					"presentation_rect" : [ 83.0, 80.6875, 217.0, 48.0 ],
 					"text" : "Click / hit                   and show one gesture that will make the sound's current configuration."
 				}
 
@@ -124,9 +124,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 439.333373999999992, 809.113006603515714, 52.512001037597656, 26.185943603515625 ],
+					"patching_rect" : [ 439.333373999999992, 809.113006603515714, 54.6298828125, 25.0146484375 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 89.559997500000009, 172.740341198242277, 52.512001037597656, 26.185943603515625 ],
+					"presentation_rect" : [ 89.559997500000009, 172.740341198242277, 54.6298828125, 25.0146484375 ],
 					"rounded" : 10.0,
 					"text" : "clear",
 					"textcolor" : [ 0.996078431372549, 0.976470588235294, 0.976470588235294, 1.0 ],
@@ -151,9 +151,9 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 561.499720023792293, 809.113006603515714, 54.2760009765625, 26.185943603515625 ],
+					"patching_rect" : [ 561.499720023792293, 809.113006603515714, 55.34765625, 25.0146484375 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 89.559997500000009, 140.147369396484464, 54.2760009765625, 26.185943603515625 ],
+					"presentation_rect" : [ 89.559997500000009, 140.147369396484464, 55.34765625, 25.0146484375 ],
 					"rounded" : 10.0,
 					"text" : "undo",
 					"textcolor" : [ 0.996078431372549, 0.976470588235294, 0.976470588235294, 1.0 ],
@@ -209,7 +209,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 338.999969000000021, 1025.0, 47.0, 33.0 ],
+					"patching_rect" : [ 338.999969000000021, 1025.0, 47.0, 34.0 ],
 					"text" : "Quick train"
 				}
 
@@ -221,7 +221,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 142.999977000000001, 985.282531999999946, 51.0, 33.0 ],
+					"patching_rect" : [ 142.999977000000001, 985.282531999999946, 51.0, 34.0 ],
 					"text" : "precise train"
 				}
 
@@ -233,7 +233,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 957.0, 973.0, 147.0, 47.0 ],
+					"patching_rect" : [ 957.0, 973.0, 147.0, 48.0 ],
 					"text" : "we've received all data, now you can change. \n"
 				}
 
@@ -380,7 +380,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-19",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -416,11 +416,11 @@
 				"box" : 				{
 					"comment" : "Active",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 615.333312999999976, 47.0, 30.0, 30.0 ]
 				}
 
@@ -456,7 +456,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 644.333312999999862, 759.500000000000114, 88.0, 33.0 ],
+					"patching_rect" : [ 644.333312999999862, 759.500000000000114, 88.0, 34.0 ],
 					"text" : "q: 113\nw: 119"
 				}
 
@@ -501,7 +501,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-18",
-					"index" : 0,
+					"index" : 6,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -540,10 +540,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 388.0, 99.0, 150.0, 60.0 ],
+					"patching_rect" : [ 388.0, 99.0, 150.0, 62.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 83.0, 31.78125, 218.5, 47.0 ],
+					"presentation_rect" : [ 83.0, 31.78125, 218.5, 48.0 ],
 					"text" : "Hold click /          and show many gestures that will make a random mapping."
 				}
 
@@ -740,7 +740,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -766,7 +766,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 153.0, 140.147369396484464, 126.0, 61.0 ],
 					"rowheight" : 20,
-					"rows" : 23,
+					"rows" : 100,
 					"vscroll" : 0
 				}
 
@@ -969,7 +969,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-8",
-					"index" : 0,
+					"index" : 4,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -993,7 +993,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1206,7 +1206,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-132",
-					"index" : 0,
+					"index" : 7,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1218,7 +1218,7 @@
 				"box" : 				{
 					"comment" : "Precise",
 					"id" : "obj-133",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1230,7 +1230,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-136",
-					"index" : 0,
+					"index" : 5,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1242,7 +1242,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-138",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1916,15 +1916,6 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "keystate.maxpat",
-				"bootpath" : "~/Sound_Control/src",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0,
 		"boxgroups" : [ 			{
 				"boxes" : [ "obj-38", "obj-32" ]
 			}

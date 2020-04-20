@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 4,
+			"minor" : 1,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 38.0, 220.0, 1368.0, 788.0 ],
+		"rect" : [ 1614.0, 159.0, 1850.0, 789.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,12 +39,35 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 172.499907999999976, 83.0, 97.0, 22.0 ],
+					"text" : "s model_cleared"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 48.166504000000032, 83.0, 94.0, 22.0 ],
+					"text" : "s model_trained"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-46",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 156.0, 463.0, 50.0, 22.0 ]
+					"patching_rect" : [ 156.0, 463.0, 153.0, 22.0 ],
+					"text" : "training_example_16::input"
 				}
 
 			}
@@ -113,7 +136,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 125.0, 0.0, 51.0, 33.0 ],
+					"patching_rect" : [ 125.0, 0.0, 51.0, 34.0 ],
 					"text" : "quick Train"
 				}
 
@@ -125,7 +148,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 61.5, 0.0, 51.0, 33.0 ],
+					"patching_rect" : [ 61.5, 0.0, 51.0, 34.0 ],
 					"text" : "precise train"
 				}
 
@@ -137,7 +160,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 3.833221000000002, 0.0, 47.0, 33.0 ],
+					"patching_rect" : [ 3.833221000000002, 0.0, 47.0, 34.0 ],
 					"text" : "precise(metro)"
 				}
 
@@ -218,7 +241,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
-					"index" : 0,
+					"index" : 10,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -231,11 +254,11 @@
 				"box" : 				{
 					"comment" : "Active",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 9,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 917.0, 54.0, 30.0, 30.0 ]
 				}
 
@@ -260,7 +283,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 1287.0, 490.500121999999976, 159.0, 22.0 ],
+					"patching_rect" : [ 1287.0, 490.500121999999976, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -315,7 +338,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 918.333252000000016, 635.500121999999919, 159.0, 22.0 ],
+					"patching_rect" : [ 918.333252000000016, 635.500121999999919, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -378,11 +401,11 @@
 				"box" : 				{
 					"comment" : "QuickTrain",
 					"id" : "obj-23",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 125.0, 39.666381999999999, 30.0, 30.0 ]
 				}
 
@@ -394,7 +417,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 245.499908000000005, 83.0, 34.0, 22.0 ],
+					"patching_rect" : [ 245.499908000000005, 117.0, 34.0, 22.0 ],
 					"text" : "t b 0"
 				}
 
@@ -415,11 +438,11 @@
 				"box" : 				{
 					"comment" : "Undo(bang",
 					"id" : "obj-42",
-					"index" : 0,
+					"index" : 5,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 245.499908000000005, 39.666381999999999, 30.0, 30.0 ]
 				}
 
@@ -467,7 +490,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 752.333129999999983, 92.0, 150.0, 100.0 ],
+					"patching_rect" : [ 752.333129999999983, 92.0, 150.0, 103.0 ],
 					"text" : "Inlets:\n1 takes the dict you want to store as an undo state.\n2 bang to go back in time.\n\nOutlets\n1 undo'd dict"
 				}
 
@@ -503,7 +526,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 178.499908000000005, 83.0, 34.0, 22.0 ],
+					"patching_rect" : [ 178.499908000000005, 117.0, 34.0, 22.0 ],
 					"text" : "t b b"
 				}
 
@@ -527,7 +550,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 968.0, 54.0, 150.0, 114.0 ],
+					"patching_rect" : [ 968.0, 54.0, 150.0, 117.0 ],
 					"text" : "Presice (metro)\nPreciece Train\nQuick Train (bang)\nClear (bang)\nUndo (bang)\nInput\nOutput\nQuick Dict Copy"
 				}
 
@@ -573,7 +596,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 201.333251999999987, 865.33300799999995, 150.0, 33.0 ],
+					"patching_rect" : [ 201.333251999999987, 865.33300799999995, 150.0, 34.0 ],
 					"text" : "Output random data first, then precice data."
 				}
 
@@ -755,7 +778,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 145.333344000000011, 927.499634000000015, 159.0, 22.0 ],
+					"patching_rect" : [ 145.333344000000011, 927.499634000000015, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -809,7 +832,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 201.333251999999987, 684.500488000000018, 159.0, 22.0 ],
+					"patching_rect" : [ 201.333251999999987, 684.500488000000018, 172.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 0,
 						"parameter_enable" : 0,
@@ -980,11 +1003,11 @@
 				"box" : 				{
 					"comment" : "Quick Dict Copy",
 					"id" : "obj-175",
-					"index" : 0,
+					"index" : 8,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "dictionary" ],
 					"patching_rect" : [ 612.333129999999983, 39.666381999999999, 30.0, 30.0 ]
 				}
 
@@ -993,11 +1016,11 @@
 				"box" : 				{
 					"comment" : "PreciseTrain",
 					"id" : "obj-176",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 70.0, 39.666381999999999, 30.0, 30.0 ]
 				}
 
@@ -1006,7 +1029,7 @@
 				"box" : 				{
 					"comment" : "Input",
 					"id" : "obj-177",
-					"index" : 0,
+					"index" : 6,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1019,11 +1042,11 @@
 				"box" : 				{
 					"comment" : "Precise(metro)",
 					"id" : "obj-179",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 24.333221000000002, 39.666381999999999, 30.0, 30.0 ]
 				}
 
@@ -1032,11 +1055,11 @@
 				"box" : 				{
 					"comment" : "Clear(bang)",
 					"id" : "obj-180",
-					"index" : 0,
+					"index" : 4,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 178.499908000000005, 39.666381999999999, 30.0, 30.0 ]
 				}
 
@@ -1045,7 +1068,7 @@
 				"box" : 				{
 					"comment" : "Output",
 					"id" : "obj-186",
-					"index" : 0,
+					"index" : 7,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1058,7 +1081,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-190",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1201,6 +1224,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
+					"order" : 2,
+					"source" : [ "obj-176", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
 					"order" : 1,
 					"source" : [ "obj-176", 0 ]
 				}
@@ -1237,7 +1268,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"order" : 1,
+					"source" : [ "obj-180", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
+					"order" : 0,
 					"source" : [ "obj-180", 0 ]
 				}
 
@@ -1317,8 +1357,17 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-197", 0 ],
+					"order" : 0,
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"midpoints" : [ 416.166564999999991, 258.0, 312.0, 258.0, 312.0, 606.0, 210.833251999999987, 606.0 ],
+					"order" : 1,
 					"source" : [ "obj-19", 0 ]
 				}
 
@@ -1422,6 +1471,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
+					"order" : 1,
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"order" : 0,
 					"source" : [ "obj-23", 0 ]
 				}
 
@@ -1547,7 +1605,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-61", 0 ]
 				}
 
@@ -1555,7 +1613,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-46", 1 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-61", 0 ]
 				}
 
@@ -1639,15 +1697,6 @@
 
 			}
  ],
-		"dependency_cache" : [ 			{
-				"name" : "model_undo_dict.maxpat",
-				"bootpath" : "~/Sound_Control/src",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "AudioStatus_Menu",
 				"default" : 				{
