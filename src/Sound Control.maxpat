@@ -10,8 +10,8 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 25.0, 85.0, 1271.0, 668.0 ],
-		"openrect" : [ 0.0, 0.0, 421.0, 153.0 ],
+		"rect" : [ 34.0, 77.0, 1852.0, 929.0 ],
+		"openrect" : [ 0.0, 0.0, 428.0, 153.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -56,7 +56,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 59.0, 107.0, 892.0, 262.0 ],
+						"rect" : [ 59.0, 107.0, 892.0, 172.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -114,11 +114,11 @@
 									"id" : "obj-4",
 									"lockeddragscroll" : 0,
 									"maxclass" : "bpatcher",
-									"name" : "sound1.maxpat",
+									"name" : "sound7.maxpat",
 									"numinlets" : 5,
 									"numoutlets" : 2,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "signal", "" ],
+									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 330.0, 10.0, 300.0, 220.0 ],
 									"viewvisibility" : 1
 								}
@@ -134,7 +134,7 @@
 									"id" : "obj-6",
 									"lockeddragscroll" : 0,
 									"maxclass" : "bpatcher",
-									"name" : "model1.maxpat",
+									"name" : "model5.maxpat",
 									"numinlets" : 5,
 									"numoutlets" : 2,
 									"offset" : [ 0.0, 0.0 ],
@@ -230,7 +230,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 120.0, 10.0, 72.0, 22.0 ],
-									"text" : "Instrument1"
+									"text" : "Instrument0"
 								}
 
 							}
@@ -359,7 +359,7 @@
 						"bgcolor" : [ 0.662745098, 0.705882353, 0.760784314, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 760.0, 28.0, 100.0, 22.0 ],
+					"patching_rect" : [ 760.0, 5.0, 100.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -368,7 +368,31 @@
 						"tags" : ""
 					}
 ,
-					"text" : "p Instrument1"
+					"text" : "p Instrument0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-221",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 315.083373999999935, -78.766567321815273, 188.499970000000076, 48.0 ],
+					"text" : "Disables the menu item 'Sample Modulator' for all sensors except Mouse and Myo"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-178",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 750.583229838790885, 1320.237213749999682, 152.0, 48.0 ],
+					"text" : "The higher refresh rate improves the classification performance"
 				}
 
 			}
@@ -755,7 +779,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 102.0, 136.0, 948.0, 642.0 ],
+						"rect" : [ 34.0, 77.0, 1562.0, 929.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -782,15 +806,159 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-27",
+									"linecount" : 7,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1021.000000000000114, 485.5, 437.0, 103.0 ],
+									"text" : "The 'connected' message only gets sent on initial (de-)connection. At all other times, we can check the status with the 'device' message. If no Myo is connected, it returns a bang, otherwise the name of the Myo. Because a bang cannot be interpreted, we always first send a '0' message to set the status to disconnected before rectifying it (or not).\nIf a Myo is named '0', it will always be displayed as disconnected (even if it isn't).\nThe 'connected' message also sends 'connected 0' to signify a disconnection. "
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-25",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 17.0, 159.0, 174.0, 34.0 ],
+									"text" : "All the data from this patch is sent to the myo sensor patch."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-24",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 853.0, 600.0, 109.0, 20.0 ],
+									"text" : "Connection status"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 563.000000000000114, 600.0, 117.0, 20.0 ],
+									"text" : "Current battery level"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 482.000000000000114, 456.0, 198.0, 34.0 ],
+									"text" : "All info data comes out of one outlet and needs to be separated."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-20",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 287.0, 590.0, 150.0, 34.0 ],
+									"text" : "EMG data is be scaled in the Myo sensor patch."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-19",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 10.500038000000018, 478.5, 150.0, 75.0 ],
+									"text" : "The hidden markov model of the 'Sample Modulator' expects data between -1 and 1. Scaling does not affect the other models."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-17",
+									"linecount" : 6,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 628.0, 194.0, 182.0, 89.0 ],
+									"text" : "Connects to the Myo upon creation of a Myo instrument and periodically queries the myo-for-max object, such that the connection status and battery level remain up to date."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 55.500038000000131, 321.0, 151.0, 48.0 ],
+									"text" : "myo-for-max object. Used to connect to the Myo and retrieves its data."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 248.500038000000018, 50.0, 100.0, 20.0 ],
+									"text" : "Get External"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 9.0,
+									"id" : "obj-58",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 29.500038000000018, 83.0, 319.0, 30.0 ],
+									"text" : ";\r\nmax launchbrowser https://github.com/JulesFrancoise/myo-for-max"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 29.500038000000131, 50.0, 218.0, 20.0 ],
+									"text" : "Depends on the external 'myo-for-max':  "
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-18",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "int" ],
-									"patching_rect" : [ 480.0, 331.0, 31.0, 22.0 ],
+									"patching_rect" : [ 988.000000000000114, 505.0, 31.0, 22.0 ],
 									"text" : "t s 0"
 								}
 
@@ -802,7 +970,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 480.0, 377.0, 29.5, 22.0 ],
+									"patching_rect" : [ 988.000000000000114, 550.0, 29.5, 22.0 ],
 									"text" : "$1"
 								}
 
@@ -813,7 +981,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 480.0, 416.0, 103.0, 22.0 ],
+									"patching_rect" : [ 970.000000000000114, 599.0, 103.0, 22.0 ],
 									"text" : "s myo_connected"
 								}
 
@@ -825,7 +993,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 278.5, 202.0, 49.0, 22.0 ],
+									"patching_rect" : [ 397.000038000000018, 283.0, 49.0, 22.0 ],
 									"text" : "devices"
 								}
 
@@ -837,7 +1005,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "bang" ],
-									"patching_rect" : [ 433.0, 153.0, 42.0, 22.0 ],
+									"patching_rect" : [ 551.500038000000018, 234.0, 42.0, 22.0 ],
 									"text" : "t b b b"
 								}
 
@@ -849,7 +1017,7 @@
 									"numinlets" : 6,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 129.0, 291.0, 98.0, 22.0 ],
+									"patching_rect" : [ 169.500038000000018, 497.0, 98.0, 22.0 ],
 									"text" : "scale -3. 3. -1. 1."
 								}
 
@@ -860,7 +1028,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 373.0, 416.0, 84.0, 22.0 ],
+									"patching_rect" : [ 682.000000000000114, 599.0, 84.0, 22.0 ],
 									"text" : "s myo_battery"
 								}
 
@@ -872,7 +1040,7 @@
 									"numinlets" : 4,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 373.0, 291.0, 179.0, 22.0 ],
+									"patching_rect" : [ 682.000000000000114, 462.0, 179.0, 22.0 ],
 									"text" : "route battery connected devices"
 								}
 
@@ -883,7 +1051,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 129.0, 336.0, 103.0, 22.0 ],
+									"patching_rect" : [ 169.500038000000018, 599.0, 103.0, 22.0 ],
 									"text" : "s myo_orientation"
 								}
 
@@ -894,7 +1062,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 242.0, 336.0, 71.0, 22.0 ],
+									"patching_rect" : [ 439.0, 599.0, 71.0, 22.0 ],
 									"text" : "s myo_emg"
 								}
 
@@ -908,7 +1076,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 237.5, 75.0, 30.0, 30.0 ]
+									"patching_rect" : [ 207.500038000000018, 159.0, 30.0, 30.0 ]
 								}
 
 							}
@@ -919,7 +1087,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 285.0, 113.0, 139.0, 22.0 ],
+									"patching_rect" : [ 397.000038000000018, 194.0, 139.0, 22.0 ],
 									"text" : "qmetro 60000 @active 1"
 								}
 
@@ -931,7 +1099,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 331.0, 202.0, 29.5, 22.0 ],
+									"patching_rect" : [ 449.500038000000018, 283.0, 29.5, 22.0 ],
 									"text" : "info"
 								}
 
@@ -943,7 +1111,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 433.0, 113.0, 69.0, 22.0 ],
+									"patching_rect" : [ 551.500038000000018, 194.0, 69.0, 22.0 ],
 									"text" : "r myo_start"
 								}
 
@@ -955,7 +1123,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 369.5, 202.0, 51.0, 22.0 ],
+									"patching_rect" : [ 488.000038000000018, 283.0, 51.0, 22.0 ],
 									"text" : "connect"
 								}
 
@@ -967,7 +1135,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 6,
 									"outlettype" : [ "", "", "", "", "", "" ],
-									"patching_rect" : [ 237.5, 250.0, 80.0, 22.0 ],
+									"patching_rect" : [ 207.500038000000018, 334.0, 80.0, 22.0 ],
 									"text" : "myo @emg 1"
 								}
 
@@ -976,6 +1144,7 @@
 						"lines" : [ 							{
 								"patchline" : 								{
 									"destination" : [ "obj-5", 0 ],
+									"midpoints" : [ 406.500038000000018, 249.0, 459.000038000000018, 249.0 ],
 									"order" : 0,
 									"source" : [ "obj-1", 0 ]
 								}
@@ -992,6 +1161,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-5", 0 ],
+									"midpoints" : [ 572.500038000000018, 269.0, 459.000038000000018, 269.0 ],
 									"source" : [ "obj-10", 1 ]
 								}
 
@@ -999,6 +1169,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-66", 0 ],
+									"midpoints" : [ 584.000038000000018, 269.0, 497.500038000000018, 269.0 ],
 									"source" : [ "obj-10", 2 ]
 								}
 
@@ -1006,6 +1177,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
+									"midpoints" : [ 561.000038000000018, 269.0, 406.500038000000018, 269.0 ],
 									"source" : [ "obj-10", 0 ]
 								}
 
@@ -1019,7 +1191,16 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-58", 0 ],
+									"midpoints" : [ 258.000038000000018, 76.0, 39.000038000000018, 76.0 ],
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
+									"midpoints" : [ 997.500000000000114, 580.5, 979.500000000000114, 580.5 ],
 									"source" : [ "obj-16", 0 ]
 								}
 
@@ -1027,6 +1208,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-16", 0 ],
+									"midpoints" : [ 1009.500000000000114, 541.5, 997.500000000000114, 541.5 ],
 									"source" : [ "obj-18", 1 ]
 								}
 
@@ -1048,6 +1230,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-14", 0 ],
+									"midpoints" : [ 744.833333333333485, 580.0, 979.500000000000114, 580.0 ],
 									"source" : [ "obj-39", 1 ]
 								}
 
@@ -1055,6 +1238,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-18", 0 ],
+									"midpoints" : [ 798.166666666666742, 492.5, 997.500000000000114, 492.5 ],
 									"source" : [ "obj-39", 2 ]
 								}
 
@@ -1069,6 +1253,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-65", 0 ],
+									"midpoints" : [ 459.000038000000018, 319.0, 217.000038000000018, 319.0 ],
 									"source" : [ "obj-5", 0 ]
 								}
 
@@ -1083,6 +1268,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-39", 0 ],
+									"midpoints" : [ 278.000038000000018, 362.5, 691.500000000000114, 362.5 ],
 									"source" : [ "obj-65", 5 ]
 								}
 
@@ -1090,6 +1276,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-6", 0 ],
+									"midpoints" : [ 241.400038000000023, 376.0, 179.000038000000018, 376.0 ],
 									"source" : [ "obj-65", 2 ]
 								}
 
@@ -1097,6 +1284,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-7", 0 ],
+									"midpoints" : [ 253.600038000000012, 425.0, 448.5, 425.0 ],
 									"source" : [ "obj-65", 3 ]
 								}
 
@@ -1104,6 +1292,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-65", 0 ],
+									"midpoints" : [ 497.500038000000018, 319.0, 217.000038000000018, 319.0 ],
 									"source" : [ "obj-66", 0 ]
 								}
 
@@ -1111,6 +1300,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-65", 0 ],
+									"midpoints" : [ 406.500038000000018, 319.0, 217.000038000000018, 319.0 ],
 									"source" : [ "obj-9", 0 ]
 								}
 
@@ -1180,7 +1370,6 @@
 , 							{
 								"name" : "dark-night-patch",
 								"default" : 								{
-									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 									"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
@@ -1191,6 +1380,7 @@
 										"proportion" : 0.39
 									}
 ,
+									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 									"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ]
 								}
 ,
@@ -1223,8 +1413,8 @@
 , 							{
 								"name" : "newobjYellow-1",
 								"default" : 								{
-									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-									"fontsize" : [ 12.059008 ]
+									"fontsize" : [ 12.059008 ],
+									"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1902,7 +2092,7 @@
 					"outlettype" : [ "", "", "int" ],
 					"outputmode" : 0,
 					"parameter_enable" : 0,
-					"patching_rect" : [ 329.833344000000011, 58.0, 75.0, 21.0 ],
+					"patching_rect" : [ 331.75, 58.0, 75.0, 21.0 ],
 					"rounded" : 13.0,
 					"text" : "Generate",
 					"texton" : "Generate"
@@ -2158,20 +2348,20 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 618.0, 1052.0, 344.0, 103.0 ],
-					"text" : "Model 1 = Standard\nModel 2 = Standard\nModel 3 = Standard + Quick\nModel 4 = Standard Regression \nModel 4a = Standard Regression + Quick + Extra Classification\n\n"
+					"patching_rect" : [ 613.458298000000013, 1052.0, 348.541701999999987, 103.0 ],
+					"text" : "Model 1 = Standard\nModel 2 = Standard\nModel 3 = Standard + Quick\nModel 4 = Standard Regression \nModel 4a = Standard Regression + Quick + Extra Classification\nModel 5 = Hierarchical Hidden Markov\n"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-93",
-					"linecount" : 5,
+					"linecount" : 6,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 429.0, 1052.0, 165.0, 75.0 ],
-					"text" : "Sample Player uses model 1.\nGranulator uses model 4a.\nLooper uses model 3.\nMixer uses model 4.\nFMSynth uses model 4a."
+					"patching_rect" : [ 408.0, 1052.0, 186.0, 89.0 ],
+					"text" : "Sample Player uses model 1.\nGranulator uses model 4a.\nLooper uses model 3.\nMixer uses model 4.\nFMSynth uses model 4a.\nSample Modulator uses model 5."
 				}
 
 			}
@@ -7018,7 +7208,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 23.0, 534.0, 56.0, 22.0 ],
 									"text" : "autopattr",
-									"varname" : "u765004070"
+									"varname" : "u198000834"
 								}
 
 							}
@@ -13398,7 +13588,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 209.75, 58.0, 111.0, 22.0 ],
+					"patching_rect" : [ 203.25, 58.0, 124.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 159.0, 71.0, 100.0, 22.0 ]
 				}
@@ -13410,7 +13600,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 213.75, 37.0, 103.0, 20.0 ],
+					"patching_rect" : [ 207.25, 37.0, 103.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 159.0, 38.0, 150.0, 20.0 ],
 					"text" : "Pick Sound Mode",
@@ -13524,7 +13714,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 12.0, 400.0, 130.0 ],
+					"patching_rect" : [ 10.0, 12.0, 406.0, 130.0 ],
 					"proportion" : 0.39,
 					"rounded" : 0
 				}
@@ -13539,7 +13729,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 2.0, 420.0, 150.0 ],
+					"patching_rect" : [ 0.0, 2.0, 426.0, 150.0 ],
 					"proportion" : 0.39,
 					"rounded" : 0
 				}
@@ -14681,7 +14871,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"midpoints" : [ 1421.199951000000056, 726.0, 1044.0, 726.0, 1044.0, 291.0, 417.0, 291.0, 417.0, 24.0, 216.0, 24.0, 216.0, 54.0, 219.25, 54.0 ],
+					"midpoints" : [ 1421.199951000000056, 726.0, 1044.0, 726.0, 1044.0, 291.0, 417.0, 291.0, 417.0, 24.0, 216.0, 24.0, 216.0, 54.0, 212.75, 54.0 ],
 					"source" : [ "obj-261", 0 ]
 				}
 
@@ -15120,7 +15310,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-45", 0 ],
 					"hidden" : 1,
-					"midpoints" : [ 219.25, 81.0, 195.0, 81.0, 195.0, 225.0, 36.0, 225.0, 36.0, 664.0, 212.249999999999943, 664.0 ],
+					"midpoints" : [ 212.75, 81.0, 195.0, 81.0, 195.0, 225.0, 36.0, 225.0, 36.0, 664.0, 212.249999999999943, 664.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -15232,7 +15422,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"hidden" : 1,
-					"midpoints" : [ 339.333344000000011, 84.0, 410.0, 84.0, 410.0, 795.0, 60.916671999999949, 795.0 ],
+					"midpoints" : [ 341.25, 84.0, 410.0, 84.0, 410.0, 795.0, 60.916671999999949, 795.0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -15317,35 +15507,51 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-24::obj-4::obj-31.2::obj-46" : [ "live.gain~[4]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.6::obj-46" : [ "live.gain~[12]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-75" : [ "live.gain~[2]", "Volume", 0 ],
+			"obj-24::obj-4::obj-31.3::obj-41" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.4::obj-41" : [ "live.gain~[7]", "live.gain~", 0 ],
+			"obj-215::obj-4::obj-156" : [ "live.gain~[13]", "Volume", 0 ],
+			"obj-24::obj-4::obj-31.5::obj-46" : [ "live.gain~[10]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.6::obj-41" : [ "live.gain~[11]", "live.gain~", 0 ],
-			"obj-215::obj-4::obj-135" : [ "live.gain~[13]", "Volume", 0 ],
+			"obj-24::obj-4::obj-31.2::obj-46" : [ "live.gain~[4]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.2::obj-41" : [ "live.gain~[1]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.3::obj-46" : [ "live.gain~[5]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.1::obj-46" : [ "live.gain~[3]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.4::obj-46" : [ "live.gain~[8]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.5::obj-41" : [ "live.gain~[9]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.6::obj-46" : [ "live.gain~[12]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.3::obj-41" : [ "live.gain~[6]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.2::obj-41" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.1::obj-46" : [ "live.gain~[3]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.4::obj-41" : [ "live.gain~[7]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.5::obj-46" : [ "live.gain~[10]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.1::obj-41" : [ "live.gain~", "live.gain~", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
-				"obj-24::obj-4::obj-31.2::obj-46" : 				{
-					"parameter_longname" : "live.gain~[4]"
+				"obj-24::obj-4::obj-31.6::obj-46" : 				{
+					"parameter_longname" : "live.gain~[12]"
+				}
+,
+				"obj-24::obj-4::obj-31.3::obj-41" : 				{
+					"parameter_longname" : "live.gain~[6]"
+				}
+,
+				"obj-24::obj-4::obj-31.4::obj-41" : 				{
+					"parameter_longname" : "live.gain~[7]"
+				}
+,
+				"obj-24::obj-4::obj-31.5::obj-46" : 				{
+					"parameter_longname" : "live.gain~[10]"
 				}
 ,
 				"obj-24::obj-4::obj-31.6::obj-41" : 				{
 					"parameter_longname" : "live.gain~[11]"
 				}
 ,
-				"obj-215::obj-4::obj-135" : 				{
-					"parameter_longname" : "live.gain~[13]"
+				"obj-24::obj-4::obj-31.2::obj-46" : 				{
+					"parameter_longname" : "live.gain~[4]"
+				}
+,
+				"obj-24::obj-4::obj-31.2::obj-41" : 				{
+					"parameter_longname" : "live.gain~[1]"
 				}
 ,
 				"obj-24::obj-4::obj-31.3::obj-46" : 				{
@@ -15358,26 +15564,6 @@
 ,
 				"obj-24::obj-4::obj-31.5::obj-41" : 				{
 					"parameter_longname" : "live.gain~[9]"
-				}
-,
-				"obj-24::obj-4::obj-31.6::obj-46" : 				{
-					"parameter_longname" : "live.gain~[12]"
-				}
-,
-				"obj-24::obj-4::obj-31.3::obj-41" : 				{
-					"parameter_longname" : "live.gain~[6]"
-				}
-,
-				"obj-24::obj-4::obj-31.2::obj-41" : 				{
-					"parameter_longname" : "live.gain~[1]"
-				}
-,
-				"obj-24::obj-4::obj-31.4::obj-41" : 				{
-					"parameter_longname" : "live.gain~[7]"
-				}
-,
-				"obj-24::obj-4::obj-31.5::obj-46" : 				{
-					"parameter_longname" : "live.gain~[10]"
 				}
 
 			}
@@ -15476,7 +15662,21 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sound1.maxpat",
+				"name" : "model5.maxpat",
+				"bootpath" : "~/Documents/GitHub/Sound_Control/src",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "model_UI_precise_hhmm.maxpat",
+				"bootpath" : "~/Documents/GitHub/Sound_Control/src",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "sound7.maxpat",
 				"bootpath" : "~/Documents/GitHub/Sound_Control/src",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
@@ -15492,6 +15692,26 @@
 			}
 , 			{
 				"name" : "pipo.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "mubu.hhmm.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "mubu.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "mubu.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "mubu.granular~.mxe64",
+				"type" : "mx64"
+			}
+, 			{
+				"name" : "mubu.mxe64",
 				"type" : "mx64"
 			}
  ],
@@ -15560,7 +15780,6 @@
 , 			{
 				"name" : "dark-night-patch",
 				"default" : 				{
-					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -15571,6 +15790,7 @@
 						"proportion" : 0.39
 					}
 ,
+					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ]
 				}
 ,
@@ -15603,8 +15823,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
