@@ -323,13 +323,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-18",
-					"linecount" : 15,
+					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 389.333252000000016, 129.0, 52.0, 215.0 ],
-					"text" : "-0.165629 0.155538 0.039205 0.240723 -0.8 -0.84 -0.68 -0.88 -0.96 -0.92 -0.88 -0.94"
+					"patching_rect" : [ 389.333252000000016, 129.0, 52.0, 64.0 ],
+					"text" : "0.611111 -0.07963"
 				}
 
 			}
@@ -488,7 +488,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 882.416625999999951, 275.0, 150.0, 158.0 ],
+					"patching_rect" : [ 1259.416625999999951, 24.000015000000001, 150.0, 158.0 ],
 					"text" : "ALL HAVE:\n\n1. metro\n2. train bang\n3. clear\n4. input\n5. output\n\n1 have Run.\n\n1 has dict input"
 				}
 
@@ -1094,8 +1094,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",

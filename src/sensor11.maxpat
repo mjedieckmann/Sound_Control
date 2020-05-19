@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1852.0, 929.0 ],
+		"rect" : [ 197.0, 102.0, 1852.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,29 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-77",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 967.5, 724.0, 214.0, 20.0 ],
+					"text" : "Which beat is the metronome playing?"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-68",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1187.0, 724.0, 107.0, 22.0 ],
+					"text" : "r metronome_beat"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-125",
 					"linecount" : 3,
@@ -67,7 +90,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1156.03333333333353, 522.0, 153.0, 75.0 ],
+					"patching_rect" : [ 1156.03333333333353, 522.0, 155.0, 75.0 ],
 					"text" : "(If logging is enabled:) Save the current file and create a new file whenever the model is cleared or the instrument is closed."
 				}
 
@@ -126,7 +149,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1057.0, 698.0, 125.0, 20.0 ],
+					"patching_rect" : [ 1057.0, 667.0, 125.0, 20.0 ],
 					"text" : "Is the user recording?"
 				}
 
@@ -137,7 +160,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1057.0, 726.0, 125.0, 20.0 ],
+					"patching_rect" : [ 1057.0, 695.0, 125.0, 20.0 ],
 					"text" : "Is the model running?"
 				}
 
@@ -170,7 +193,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1101.0, 671.0, 81.0, 20.0 ],
+					"patching_rect" : [ 1101.0, 640.0, 81.0, 20.0 ],
 					"text" : "Sensor data."
 				}
 
@@ -240,7 +263,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 4.0, 864.5, 225.0, 34.0 ],
+					"patching_rect" : [ 4.0, 864.5, 228.0, 34.0 ],
 					"text" : "Determines which data stream to display as controlled by the 'Active' button."
 				}
 
@@ -311,7 +334,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 123.5, 315.0, 246.0, 34.0 ],
+					"patching_rect" : [ 123.5, 315.0, 249.0, 34.0 ],
 					"text" : "Scale the data for the Hidden Markov Model. Other Models are not affected by this."
 				}
 
@@ -359,7 +382,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 678.75, 170.5, 171.0, 89.0 ],
+					"patching_rect" : [ 678.75, 170.5, 176.0, 89.0 ],
 					"text" : "Slider to control the window size of the running median that is applied to the EMG data. A bigger window reduces noise at the price of reducing sensibility to change."
 				}
 
@@ -561,7 +584,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1186.25, 670.0, 32.0, 22.0 ],
+					"patching_rect" : [ 1186.25, 639.0, 32.0, 22.0 ],
 					"text" : "gate"
 				}
 
@@ -684,11 +707,11 @@
 				"box" : 				{
 					"id" : "obj-78",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1236.25, 818.0, 48.0, 22.0 ],
-					"text" : "pak 0 0"
+					"patching_rect" : [ 1236.25, 818.0, 58.0, 22.0 ],
+					"text" : "pak 0 0 0"
 				}
 
 			}
@@ -699,7 +722,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1187.0, 698.0, 66.0, 22.0 ],
+					"patching_rect" : [ 1187.0, 667.0, 66.0, 22.0 ],
 					"text" : "r recording"
 				}
 
@@ -711,7 +734,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1186.25, 726.0, 56.0, 22.0 ],
+					"patching_rect" : [ 1186.25, 695.0, 56.0, 22.0 ],
 					"text" : "r running"
 				}
 
@@ -825,7 +848,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1275.0, 1070.333294000000024, 44.0, 16.0 ],
+					"patching_rect" : [ 924.0, 1037.333294000000024, 44.0, 16.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 109.0, 198.833373999999992, 36.0, 16.0 ],
 					"rounded" : 10.0,
@@ -845,7 +868,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1246.500038000000131, 1070.333294000000024, 151.0, 34.0 ],
+					"patching_rect" : [ 898.500038000000131, 1037.333294000000024, 151.0, 34.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 77.0, 196.833373999999992, 213.000000000000028, 20.0 ],
 					"text" : "Click            to download Myo Connect"
@@ -1073,7 +1096,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1242.500038000000131, 1123.5, 291.0, 41.0 ],
+					"patching_rect" : [ 894.500038000000131, 1090.5, 291.0, 41.0 ],
 					"text" : ";\r\nmax launchbrowser https://support.getmyo.com/hc/en-us/articles/360018409792"
 				}
 
@@ -2186,7 +2209,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-78", 1 ],
-					"midpoints" : [ 1196.5, 751.5, 1274.75, 751.5 ],
+					"midpoints" : [ 1196.5, 751.5, 1265.25, 751.5 ],
 					"source" : [ "obj-64", 0 ]
 				}
 
@@ -2218,6 +2241,13 @@
 					"destination" : [ "obj-27", 0 ],
 					"midpoints" : [ 204.5, 1266.833374000000049, 332.166687000000024, 1266.833374000000049 ],
 					"source" : [ "obj-67", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-78", 2 ],
+					"source" : [ "obj-68", 0 ]
 				}
 
 			}
@@ -2483,8 +2513,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",
