@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1562.0, 929.0 ],
+		"rect" : [ 585.0, 307.0, 428.0, 153.0 ],
 		"openrect" : [ 0.0, 0.0, 428.0, 153.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -1042,7 +1042,6 @@
 								"name" : "dark-night-patch",
 								"default" : 								{
 									"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
-									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 									"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
@@ -1052,7 +1051,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1490,7 +1490,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-11",
-					"int" : 1,
 					"maxclass" : "gswitch",
 					"numinlets" : 3,
 					"numoutlets" : 1,
@@ -6879,7 +6878,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 23.0, 534.0, 56.0, 22.0 ],
 									"text" : "autopattr",
-									"varname" : "u848002071"
+									"varname" : "u722000837"
 								}
 
 							}
@@ -13282,7 +13281,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-6",
-					"items" : [ "GameTrak", ",", "Dumb Camera", ",", "Colour Tracker", ",", "Micro:Bit Position (USB) ", ",", "Microphone", ",", "Mouse", ",", "Multi-Colour Tracker", ",", "MYO" ],
+					"items" : [ "GameTrak", ",", "Dumb Camera", ",", "Colour Tracker", ",", "Leap Motion Palm Position", ",", "Leap Motion Hand Width", ",", "Micro:Bit Position (Bluetooth)", ",", "Micro:Bit Position (USB)", ",", "Microphone", ",", "Mouse", ",", "Multi-Colour Tracker" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -14096,6 +14095,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-90", 0 ],
+					"disabled" : 1,
 					"source" : [ "obj-169", 0 ]
 				}
 
@@ -15181,16 +15181,16 @@
 			"obj-24::obj-4::obj-31.4::obj-41" : [ "live.gain~[7]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.5::obj-41" : [ "live.gain~[9]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.2::obj-46" : [ "live.gain~[4]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.6::obj-41" : [ "live.gain~[11]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.1::obj-41" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.3::obj-46" : [ "live.gain~[5]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.4::obj-46" : [ "live.gain~[8]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.1::obj-46" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.6::obj-46" : [ "live.gain~[12]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-75" : [ "live.gain~[2]", "Volume", 0 ],
+			"obj-24::obj-4::obj-31.3::obj-41" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.4::obj-46" : [ "live.gain~[8]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.2::obj-41" : [ "live.gain~[1]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.5::obj-46" : [ "live.gain~[10]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.6::obj-46" : [ "live.gain~[12]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.3::obj-41" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.1::obj-46" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.6::obj-41" : [ "live.gain~[11]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.3::obj-46" : [ "live.gain~[5]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.1::obj-41" : [ "live.gain~", "live.gain~", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -15208,12 +15208,12 @@
 					"parameter_longname" : "live.gain~[4]"
 				}
 ,
-				"obj-24::obj-4::obj-31.6::obj-41" : 				{
-					"parameter_longname" : "live.gain~[11]"
+				"obj-24::obj-4::obj-31.6::obj-46" : 				{
+					"parameter_longname" : "live.gain~[12]"
 				}
 ,
-				"obj-24::obj-4::obj-31.3::obj-46" : 				{
-					"parameter_longname" : "live.gain~[5]"
+				"obj-24::obj-4::obj-31.3::obj-41" : 				{
+					"parameter_longname" : "live.gain~[6]"
 				}
 ,
 				"obj-24::obj-4::obj-31.4::obj-46" : 				{
@@ -15228,12 +15228,12 @@
 					"parameter_longname" : "live.gain~[10]"
 				}
 ,
-				"obj-24::obj-4::obj-31.6::obj-46" : 				{
-					"parameter_longname" : "live.gain~[12]"
+				"obj-24::obj-4::obj-31.6::obj-41" : 				{
+					"parameter_longname" : "live.gain~[11]"
 				}
 ,
-				"obj-24::obj-4::obj-31.3::obj-41" : 				{
-					"parameter_longname" : "live.gain~[6]"
+				"obj-24::obj-4::obj-31.3::obj-46" : 				{
+					"parameter_longname" : "live.gain~[5]"
 				}
 
 			}
@@ -15417,7 +15417,6 @@
 				"name" : "dark-night-patch",
 				"default" : 				{
 					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
-					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -15427,7 +15426,8 @@
 						"angle" : 270.0,
 						"proportion" : 0.39
 					}
-
+,
+					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
