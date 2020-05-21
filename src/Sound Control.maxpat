@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1852.0, 929.0 ],
+		"rect" : [ 128.0, 196.0, 1548.0, 690.0 ],
 		"openrect" : [ 0.0, 0.0, 428.0, 153.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -379,7 +379,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 315.083373999999935, -78.766567321815273, 188.499970000000076, 48.0 ],
+					"patching_rect" : [ 171.000014999999962, -85.608138500000337, 188.499970000000076, 48.0 ],
 					"text" : "Disables the menu item 'Sample Modulator' for all sensors except Mouse and Myo"
 				}
 
@@ -435,12 +435,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-130",
+					"linecount" : 3,
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 180.25, -65.766567321815273, 135.0, 22.0 ],
-					"text" : "expr $i1 == 7 || $i1 == 5"
+					"patching_rect" : [ 363.583344000000011, -85.608138500000337, 156.0, 50.0 ],
+					"text" : "expr ($i2 == 2 && ($i1 == 7 || $i1 == 5)) || ($i2 == 1 && ($i1 == 8 || $i1 == 10))"
 				}
 
 			}
@@ -1380,8 +1381,8 @@
 										"proportion" : 0.39
 									}
 ,
-									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ]
+									"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
+									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -7208,7 +7209,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 23.0, 534.0, 56.0, 22.0 ],
 									"text" : "autopattr",
-									"varname" : "u198000834"
+									"varname" : "u033002161"
 								}
 
 							}
@@ -13611,7 +13612,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-6",
-					"items" : [ "GameTrak", ",", "Dumb Camera", ",", "Colour Tracker", ",", "Micro:Bit Position (USB) ", ",", "Microphone", ",", "Mouse", ",", "Multi-Colour Tracker", ",", "MYO" ],
+					"items" : [ "GameTrak", ",", "Dumb Camera", ",", "Colour Tracker", ",", "Leap Motion Palm Position", ",", "Leap Motion Hand Width", ",", "Micro:Bit Position (Bluetooth)", ",", "Micro:Bit Position (USB)", ",", "Microphone", ",", "Mouse", ",", "Multi-Colour Tracker", ",", "Myo" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -14425,7 +14426,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-90", 0 ],
-					"disabled" : 1,
 					"source" : [ "obj-169", 0 ]
 				}
 
@@ -15148,6 +15148,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-130", 1 ],
+					"order" : 2,
+					"source" : [ "obj-53", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-81", 0 ],
 					"order" : 1,
 					"source" : [ "obj-53", 0 ]
@@ -15186,6 +15194,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-130", 0 ],
+					"midpoints" : [ 29.5, 90.0, 175.625, 90.0, 175.625, -76.766567321815273, 373.083344000000011, -76.766567321815273 ],
 					"order" : 1,
 					"source" : [ "obj-6", 0 ]
 				}
@@ -15507,35 +15516,38 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-24::obj-4::obj-31.2::obj-46" : [ "live.gain~[4]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.6::obj-46" : [ "live.gain~[12]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-75" : [ "live.gain~[2]", "Volume", 0 ],
-			"obj-24::obj-4::obj-31.3::obj-41" : [ "live.gain~[6]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.4::obj-41" : [ "live.gain~[7]", "live.gain~", 0 ],
-			"obj-215::obj-4::obj-156" : [ "live.gain~[13]", "Volume", 0 ],
+			"obj-24::obj-4::obj-31.3::obj-46" : [ "live.gain~[5]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.4::obj-46" : [ "live.gain~[8]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.5::obj-46" : [ "live.gain~[10]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.6::obj-41" : [ "live.gain~[11]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.2::obj-46" : [ "live.gain~[4]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.2::obj-41" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.3::obj-46" : [ "live.gain~[5]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.1::obj-46" : [ "live.gain~[3]", "live.gain~", 0 ],
-			"obj-24::obj-4::obj-31.4::obj-46" : [ "live.gain~[8]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.3::obj-41" : [ "live.gain~[6]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.4::obj-41" : [ "live.gain~[7]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.5::obj-41" : [ "live.gain~[9]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.2::obj-41" : [ "live.gain~[1]", "live.gain~", 0 ],
 			"obj-24::obj-4::obj-31.1::obj-41" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-31.1::obj-46" : [ "live.gain~[3]", "live.gain~", 0 ],
+			"obj-24::obj-4::obj-75" : [ "live.gain~[2]", "Volume", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
+				"obj-24::obj-4::obj-31.2::obj-46" : 				{
+					"parameter_longname" : "live.gain~[4]"
+				}
+,
 				"obj-24::obj-4::obj-31.6::obj-46" : 				{
 					"parameter_longname" : "live.gain~[12]"
 				}
 ,
-				"obj-24::obj-4::obj-31.3::obj-41" : 				{
-					"parameter_longname" : "live.gain~[6]"
+				"obj-24::obj-4::obj-31.3::obj-46" : 				{
+					"parameter_longname" : "live.gain~[5]"
 				}
 ,
-				"obj-24::obj-4::obj-31.4::obj-41" : 				{
-					"parameter_longname" : "live.gain~[7]"
+				"obj-24::obj-4::obj-31.4::obj-46" : 				{
+					"parameter_longname" : "live.gain~[8]"
 				}
 ,
 				"obj-24::obj-4::obj-31.5::obj-46" : 				{
@@ -15546,16 +15558,20 @@
 					"parameter_longname" : "live.gain~[11]"
 				}
 ,
-				"obj-24::obj-4::obj-31.2::obj-46" : 				{
-					"parameter_longname" : "live.gain~[4]"
+				"obj-24::obj-4::obj-31.3::obj-41" : 				{
+					"parameter_longname" : "live.gain~[6]"
+				}
+,
+				"obj-24::obj-4::obj-31.4::obj-41" : 				{
+					"parameter_longname" : "live.gain~[7]"
+				}
+,
+				"obj-24::obj-4::obj-31.5::obj-41" : 				{
+					"parameter_longname" : "live.gain~[9]"
 				}
 ,
 				"obj-24::obj-4::obj-31.2::obj-41" : 				{
 					"parameter_longname" : "live.gain~[1]"
-				}
-,
-				"obj-24::obj-4::obj-31.3::obj-46" : 				{
-					"parameter_longname" : "live.gain~[5]"
 				}
 ,
 				"obj-24::obj-4::obj-31.4::obj-46" : 				{
@@ -15790,8 +15806,8 @@
 						"proportion" : 0.39
 					}
 ,
-					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ]
+					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
+					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
